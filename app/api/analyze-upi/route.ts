@@ -34,7 +34,7 @@ Analyze the attached UPI transaction screenshot carefully.
 ${notes ? `User notes: ${notes}` : ''}
 
 Extract every transaction visible. Even if merchant name is just a person's name, still include it.
-Categorize intelligently (Food, junk food,  Groceries, Transport, Shopping, Bills, Entertainment, Health, Others, etc.).
+Categorize intelligently (Food, Groceries, Transport, Shopping, Bills, Entertainment, Health, Others, etc.).
 
 Return clean JSON only.`;
 
@@ -55,8 +55,7 @@ Return clean JSON only.`;
       ],
     });
 
-    // --- FIX: Accurate Math Calculation Override ---
-    // LLMs are bad at math, so we calculate the exact totals here in JS
+    // Accurate Math Calculation Override
     const calculatedTotal = object.transactions.reduce((sum, t) => sum + (t.amount || 0), 0);
     const calculatedCategories: Record<string, number> = {};
     
@@ -70,7 +69,6 @@ Return clean JSON only.`;
       totalSpent: calculatedTotal,
       topCategories: calculatedCategories,
     };
-    // ------------------------------------------------
 
     return Response.json(object);
 
