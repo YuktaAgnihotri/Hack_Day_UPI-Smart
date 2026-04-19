@@ -55,18 +55,11 @@ Unlike traditional expense trackers:
 * React.js / Next.js
 * Tailwind CSS
 
-**Backend**
-
-* Node.js / Express
 
 **AI & Processing**
 
 * Gemini API (multimodal AI)
 * OCR + Prompt Engineering
-
-**Database**
-
-* MongoDB / Firebase (based on implementation)
 
 ---
 
