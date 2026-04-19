@@ -13,9 +13,7 @@ export default function Home() {
           <p className="mt-3 text-xl text-zinc-600 dark:text-zinc-400">
             Upload your UPI screenshot → Get smart spending insights
           </p>
-          <p className="text-sm text-zinc-500 mt-2">
-            Works with minimal details (shop name / personal name + amount only)
-          </p>
+          
         </div>
 
         <UpiAnalyzer />
